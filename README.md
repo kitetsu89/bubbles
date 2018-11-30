@@ -1,9 +1,6 @@
 # bubbles
 
-OSI TestTool
+HTTP server testtool
 
-A testtool that allows you to test HTTP servers by:
-- requesting HTTP-statuscodes
-- setting up a TCP socket
-- DNS resolving
-
+- Schedules HTTP tests
+- Sends mail with the result of the test
