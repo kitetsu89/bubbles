@@ -25,7 +25,7 @@ username = os.environ[SMTP_USER]
 password = os.environ[SMTP_PASS]
 mail_host = 'smtp.gmail.com'
 
-recipient = ''
+recipient = os.environ[SMTP_RECP]
 
 # function for requesting HTTP-statuscode
 def http_req():
@@ -69,7 +69,7 @@ def mail_compose():
 
 # Scheduler
 # use function reference!!!!
-schedule.every().day.at("08:30").do(mail_compose)
+schedule.every(5).minutes.do(mail_compose)
 
 # Runner
 while True:
