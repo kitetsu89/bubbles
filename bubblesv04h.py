@@ -21,11 +21,11 @@ Running....
 HOST = "nu.nl"
 
 # mail information
-username = os.environ.get['SMTP_USER']
-password = os.environ.get['SMTP_PASS']
+username = os.environ['SMTP_USER']
+password = os.environ['SMTP_PASS']
 mail_host = 'smtp.gmail.com'
 
-recipient = os.environ.get['SMTP_RECP']
+recipient = os.environ['SMTP_RECP']
 
 # function for requesting HTTP-statuscode
 def http_req():
