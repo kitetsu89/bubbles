@@ -1,5 +1,6 @@
 # importing requests modules
 import requests
+import os
 
 # import scheduler and time modules
 import schedule
@@ -20,8 +21,8 @@ Running....
 HOST = "nu.nl"
 
 # mail information
-username = SMTP_USER
-password = SMTP_PASS
+username = os.environ[SMTP_USER]
+password = os.environ[SMTP_PASS]
 mail_host = 'smtp.gmail.com'
 
 recipient = ''
