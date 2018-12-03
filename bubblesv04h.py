@@ -69,7 +69,7 @@ def mail_compose():
 
 # Scheduler
 # use function reference!!!!
-schedule.every(5).minutes.do(mail_compose)
+schedule.every().day.at("08:30").do(mail_compose)
 
 # Runner
 while True:
