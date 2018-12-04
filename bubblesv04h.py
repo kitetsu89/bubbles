@@ -18,12 +18,12 @@ Running....
 """)
 
 # test object information
-HOST = "nu.nl"
+HOST = os.environ['TEST_OBJ']
 
 # mail information
 username = os.environ['SMTP_USER']
 password = os.environ['SMTP_PASS']
-mail_host = 'smtp.gmail.com'
+mail_host = os.environ['SMTP_SRV']
 
 recipient = os.environ['SMTP_RECP']
 
