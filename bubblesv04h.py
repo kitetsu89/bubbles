@@ -23,7 +23,7 @@ HOST = os.environ['TEST_OBJ']
 # mail information
 username = os.environ['SMTP_USER']
 password = os.environ['SMTP_PASS']
-mail_host = os.environ['SMTP_SRV']
+mail_host = os.environ['SMTP_SERV']
 
 recipient = os.environ['SMTP_RECP']
 
