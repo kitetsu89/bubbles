@@ -25,6 +25,7 @@ username = os.environ['SMTP_USER']
 password = os.environ['SMTP_PASS']
 mail_host = os.environ['SMTP_SERV']
 #git testje
+# nou dit is voor de tweede keer
 recipient = os.environ['SMTP_RECP']
 
 # function for requesting HTTP-statuscode
