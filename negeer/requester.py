@@ -12,7 +12,6 @@ mail_host = os.environ['SMTP_SERV']
 recipient = os.environ['SMTP_RECP']
 
 def http_req():
-    try:
         at = t.asctime(t.localtime((t.time())))
         r1 = requests.get(f"https://{HOST1}")
         r2 = requests.get(f"https://{HOST2}")
@@ -20,12 +19,5 @@ def http_req():
         u2 = r2.status_code
         st1 = f"HTTP test successful for {HOST1}, status_code: {u1} @ {at}"
         st2 = f"HTTP test successful for {HOST2}, status_code: {u2} @ {at}"
-    except:
-        st1 = f"Unable to Connect with {HOST1} @ {at}"
-        st2 = f"Unable to Connect with {HOST2} @ {at}"
-    finally:
-        print(f"{st1}\n{st2}")
-        return st1, st2
-
 
 http_req()
