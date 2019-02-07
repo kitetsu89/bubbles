@@ -1,6 +1,0 @@
-$env:TEST_OBJ_ACC= "config.rcs.mnc012.mcc204.pub.3gppnetwork.org"
-$env:TEST_OBJ_PRD= "config.rcs.mnc008.mcc204.pub.3gppnetwork.org"
-$env:SMTP_USER="vas4you@mail.com"
-$env:SMTP_PASS="VAS4you!"
-$env:SMTP_SERV="smtp.mail.com"
-$env:SMTP_RECP="kamal.belhadji@kpn.com,vasbeheer@kpn.com"
