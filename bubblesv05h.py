@@ -91,4 +91,5 @@ schedule.every().day.at("08:30").do(mail_compose)
 # Runner
 while True:
    schedule.run_pending()
-    t.sleep(1)
+
+t.sleep(1)
