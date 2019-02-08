@@ -39,11 +39,11 @@ def http_req():
             r2 = requests.get(f"https://{HOST2}")
             u1 = r1.status_code
             u2 = r2.status_code
-            st1 = f"'''Production'''\nHTTP test successful for {HOST1}, status_code: {u1} @ {at}"
-            st2 = f"'''Acceptance'''\nHTTP test successful for {HOST2}, status_code: {u2} @ {at}"
+            st1 = f"ACCEPTANCE\nHTTP test successful for {HOST1}, status_code: {u1} @ {at}"
+            st2 = f"PRODUCTION\nHTTP test successful for {HOST2}, status_code: {u2} @ {at}"
         except Exception as e:
-            st1 = f"'''Production'''\nUnable to Connect with {HOST1} @ {at}\nReason: {e}"
-            st2 = f"'''Acceptance'''\nUnable to Connect with {HOST2} @ {at}\nReason: {e}"
+            st1 = f"ACCEPTANCE\nUnable to Connect with {HOST1} @ {at}\nReason: {e}"
+            st2 = f"PRODUCTION\nUnable to Connect with {HOST2} @ {at}\nReason: {e}"
         finally:
             st = f"{st1}\n\n{st2}"
             print(st)
@@ -81,14 +81,14 @@ def mail_compose():
     finally:
         s.quit()
 
-mail_compose()
+#mail_compose()
 
 # Scheduler
 # use function reference!!!!
-#schedule.every().day.at("08:30").do(mail_compose)
+schedule.every().day.at("08:30").do(mail_compose)
 
 # Runner
-#while True:
-#  schedule.run_pending()
+while True:
+  schedule.run_pending()
 
-#t.sleep(1)
+t.sleep(1)
