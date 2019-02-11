@@ -1,0 +1,4 @@
+Bold text
+UTC-time (9:30 in mail)
+Separate production and acceptance in try/except block
+(exceptions are both URLs)
