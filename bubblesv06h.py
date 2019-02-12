@@ -15,6 +15,8 @@ import schedule
 # importing requests modules
 import requests
 
+delimiter = "\n-------------------------------------------------------------------------------\n"
+
 print("Welcome to Bubbles v0.6_for_Heroku")
 
 print("""
@@ -42,9 +44,9 @@ def http_requestor(HOST_NAME, HOST):
         at = t.asctime(t.localtime((t.time())))
         r = requests.get(f"https://{HOST}")
         u = r.status_code
-        st = f"\n{HOST_NAME}\nHTTP test successful for {HOST}, status_code: {u} @ {at}\n"
+        st = f"{HOST_NAME}\nHTTP test successful for {HOST}, status_code: {u} @ {at}\n"
     except Exception as e:
-        st = f"\n{HOST_NAME}\nUnable to connect with {HOST} @ {at}\nLog: {e}\n"
+        st = f"{HOST_NAME}\nUnable to connect with {HOST} @ {at}\nLog: {e}\n"
     finally:
         return st
 
@@ -59,7 +61,7 @@ def mail_login():
 # Message text is a string
 def mail_compose():
     s = mail_login()
-    msg_text = http_requestor(HOST_LIST1[0], HOST_LIST1[1]) + http_requestor(HOST_LIST2[0], HOST_LIST2[1])
+    msg_text = http_requestor(HOST_LIST1[0], HOST_LIST1[1]) + delimiter + http_requestor(HOST_LIST2[0], HOST_LIST2[1])
     msg = MIMEMultipart()
     msg.attach(MIMEText(msg_text, 'plain'))
     msg['From'] = USERNAME
