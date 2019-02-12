@@ -42,9 +42,9 @@ def http_requestor(HOST_NAME, HOST):
         at = t.asctime(t.localtime((t.time())))
         r = requests.get(f"https://{HOST}")
         u = r.status_code
-        st = f"{HOST_NAME}\nHTTP test successful for {HOST}, status_code: {u} @ {at}\n"
+        st = f"\n{HOST_NAME}\nHTTP test successful for {HOST}, status_code: {u} @ {at}\n"
     except Exception as e:
-        st = f"{HOST_NAME}\nUnable to connect with {HOST} @ {at}\nLog: {e}\n"
+        st = f"\n{HOST_NAME}\nUnable to connect with {HOST} @ {at}\nLog: {e}\n"
     finally:
         return st
 
