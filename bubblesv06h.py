@@ -24,7 +24,7 @@ Running....
 # Objects to be tested
 HOST1 = os.environ['HOST1'] # [HOST_NAME, HOST]
 HOST2 = os.environ['HOST2'] # [HOST_NAME, HOST]
-# split into HOST URL and HOST-name
+# split into HOST-name and HOST URL
 HOST_LIST1 = HOST1.split(',')
 HOST_LIST2 = HOST2.split(',')
 
