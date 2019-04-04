@@ -24,9 +24,9 @@ Running....
 """)
 
 # Objects to be tested
-HOST1 = os.environ['HOST1'] # [HOST_NAME, HOST]
-HOST2 = os.environ['HOST2'] # [HOST_NAME, HOST]
-# split into HOST-name and HOST URL
+HOST1 = os.environ['HOST1'] # [HOST_NAME, HOST_URL]
+HOST2 = os.environ['HOST2'] # [HOST_NAME, HOST_URL]
+# split into HOST_NAME and HOST_URL
 HOST_LIST1 = HOST1.split(',')
 HOST_LIST2 = HOST2.split(',')
 
@@ -83,7 +83,7 @@ def mail_compose():
         s.quit()
 
 #mail_compose()
-schedule.every().day.at("08:30").do(mail_compose)
+schedule.every().day.at("04:30").do(mail_compose)
 
 # Runner
 while True:
